@@ -4,7 +4,7 @@ setup(
     version='1.0',
     packages = find_packages(),
     install_requires=[
-        "geckodriver-autoinstaller==0.1.0"
+        "geckodriver-autoinstaller==0.1.0",
         "Pillow==9.2.0",
         "requests==2.28.1",
         "selenium==4.4.3",
