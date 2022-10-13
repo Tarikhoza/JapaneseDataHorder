@@ -24,10 +24,10 @@ from ichimoe.ichimoe_deconstructor import deconstruct
 options = FirefoxOptions()
 #options.add_argument('-headless')
 #install webdriver if needed
-geckodriver_autoinstaller.install()
+#geckodriver_autoinstaller.install()
 
 #setting profile so that the download folder is in the same path as the script
-profile = webdriver.FirefoxProfile()
+#profile = webdriver.FirefoxProfile()
 profile.set_preference("browser.download.folderList", 2)
 profile.set_preference("browser.download.manager.showWhenStarting", False)
 profile.set_preference("browser.download.dir", os.path.join(os.getcwd(),"download"))

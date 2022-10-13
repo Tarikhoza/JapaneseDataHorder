@@ -1,4 +1,3 @@
-import geckodriver_autoinstaller
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -6,10 +5,11 @@ from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from time import sleep
 import os
 import json
+#import geckodriver_autoinstaller
+#geckodriver_autoinstaller.install()
 
 options = FirefoxOptions()
 options.add_argument('-headless')
-geckodriver_autoinstaller.install()
 driver = webdriver.Firefox(options=options)
 
 URL = "https://takoboto.jp/lists/study/n{}vocab/?page={}"
