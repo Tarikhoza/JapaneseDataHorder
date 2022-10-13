@@ -1,4 +1,4 @@
-import geckodriver_autoinstaller
+#import geckodriver_autoinstaller
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -14,7 +14,7 @@ from pathlib import Path
 options = FirefoxOptions()
 options.add_argument('-headless')
 #install webdriver if needed
-geckodriver_autoinstaller.install()
+#geckodriver_autoinstaller.install()
 
 #setting profile so that the download folder is in the same path as the script
 profile = webdriver.FirefoxProfile()
