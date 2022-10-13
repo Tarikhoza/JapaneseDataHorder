@@ -1,24 +1,73 @@
+from selenium import webdriver
+from selenium.webdriver.firefox.options import Options as FirefoxOptions
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
 from time import sleep
 from pathlib import Path
 from pprint import pprint as pp
 import json
 import os,sys
+import shutil
 import requests
+import geckodriver_autoinstaller
+
+
 
 package_root = os.path.dirname(os.path.realpath(__file__))+"/.."
 sys.path.append(package_root)
 
 from ichimoe.ichimoe_deconstructor import deconstruct
 
+#set options
+#set webdriver to be headless, it means to make it invisble and in work in backgound
+options = FirefoxOptions()
+#options.add_argument('-headless')
+#install webdriver if needed
+geckodriver_autoinstaller.install()
+
+#setting profile so that the download folder is in the same path as the script
+profile = webdriver.FirefoxProfile()
+profile.set_preference("browser.download.folderList", 2)
+profile.set_preference("browser.download.manager.showWhenStarting", False)
+profile.set_preference("browser.download.dir", os.path.join(os.getcwd(),"download"))
+profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream")
+
+#intialising driver
+
 TATOEBA_FILENAME = "tatoeba.tsv"
 
-#TODO:add download tsv functiton
+def download_sentence_pairs(s_language="Japanese", t_language="English",file_out="tatoeba.tsv"):
+    print("Downloading sentence pairs from tatoeba.com")
+    driver = webdriver.Firefox(options=options,firefox_profile=profile)
+    driver.get("https://tatoeba.org/en/downloads")
+    sleep(2)
+    driver.find_element(By.CLASS_NAME,"export-card").click()
+    driver.find_element(By.ID,"input-910").send_keys(s_language,Keys.RETURN)
+    driver.find_element(By.ID,"input-911").send_keys(t_language,Keys.RETURN)
+    sleep(1)
+    driver.find_element(By.ID,"custom-export").find_elements(By.TAG_NAME,"button")[4].click()
+    print("Waiting collection to be compiled...")
+    sleep(5)
+    driver.find_element(By.ID,"custom-export").find_elements(By.TAG_NAME,"button")[4].click()
+    if "download" not in os.listdir():
+        os.mkdir("download")
+    else:
+        shutil.rmtree("download")
+    sleep(1)
+    while len(os.listdir("download"))==0:
+        sleep(1)
 
+    file_to_move = os.path.join("download",os.listdir("download")[0])
+    shutil.copy2(file_to_move, file_out)
+    for i in os.listdir("download"):
+        os.remove(os.path.join("download",i))
+    shutil.rmtree("download")
+    print("Download succesful")
 
 if TATOEBA_FILENAME not in os.listdir():
-    raise FileNotFoundError("Please download the sentence pairs tsv file from this link:\
-            https://tatoeba.org/en/downloads\n and name it ", TATOEBA_FILENAME)
-    exit()
+    download_sentence_pairs()
+
 
 if "cache.json" not in os.listdir():
     os.system("echo '{}' > cache.json")
@@ -140,7 +189,7 @@ def main():
                                 break
                                 break
             n_vocab.append(word)
-        if extended not in os.listdir():
+        if "extended" not in os.listdir():
             os.mkdir("extended")
         with open(f'extended/n{str(n+1)}.json', 'w') as f:
             json.dump(n_vocab, f)

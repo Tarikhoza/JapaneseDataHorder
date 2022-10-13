@@ -1,0 +1,52 @@
+1665672915851	geckodriver	INFO	Listening on 127.0.0.1:54357
+1665672916388	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "44109" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilev0KS5O"
+*** You are running in headless mode.
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+1665672916674	Marionette	INFO	Marionette enabled
+1665672916677	Marionette	INFO	Listening on port 35291
+Read port: 35291
+WebDriver BiDi listening on ws://127.0.0.1:44109
+1665672916760	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilev0KS5O/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://127.0.0.1:44109/devtools/browser/b03dfa1a-0f4e-4ad8-a55f-8d24b550d3b9
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1665672990639	geckodriver	INFO	Listening on 127.0.0.1:57227
+1665672991193	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "39027" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilefzgSQZ"
+*** You are running in headless mode.
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+1665672991479	Marionette	INFO	Marionette enabled
+1665672991483	Marionette	INFO	Listening on port 39731
+Read port: 39731
+WebDriver BiDi listening on ws://127.0.0.1:39027
+1665672991566	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilefzgSQZ/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://127.0.0.1:39027/devtools/browser/af035fb2-a23e-454c-b0b2-721d921f0b2e
+1665673201503	geckodriver	INFO	Listening on 127.0.0.1:35175
+1665673202040	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "57575" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilegsKdni"
+*** You are running in headless mode.
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+1665673239449	geckodriver	INFO	Listening on 127.0.0.1:49789
+1665673240003	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "42561" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileeD9Nju"
+*** You are running in headless mode.
+1665673290699	geckodriver	INFO	Listening on 127.0.0.1:37783
+1665673291236	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "32805" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofiletOLklm"
+*** You are running in headless mode.
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+1665673291535	Marionette	INFO	Marionette enabled
+1665673291539	Marionette	INFO	Listening on port 35703
+WebDriver BiDi listening on ws://127.0.0.1:32805
+Read port: 35703
+1665673291759	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofiletOLklm/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://127.0.0.1:32805/devtools/browser/f200ef9a-56b2-4b38-b483-89289f7a4efe
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.

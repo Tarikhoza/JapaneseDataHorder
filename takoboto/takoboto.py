@@ -6,21 +6,14 @@ from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from time import sleep
 import os
 import json
-import pathlib
 
 options = FirefoxOptions()
 options.add_argument('-headless')
 geckodriver_autoinstaller.install()
 driver = webdriver.Firefox(options=options)
 
-def get_module_folder(module):
-    return module.__file__.split("/")[::-1]
-
-print(pathlib.Path().resolve())
-
 URL = "https://takoboto.jp/lists/study/n{}vocab/?page={}"
 WORD_URL = "https://takoboto.jp/?w={}"
-pages_per_n = [68,36,63,12,12]
 
 def get_vocab(n,page):
     driver.get(URL.format(n,page))
@@ -115,32 +108,57 @@ def get_word_by_id(word_id,n):
         print("Something went wrong but we are going on...")
         return None
 
-#TODO:  refactor download_all_vocab into two functions,
-#       1.download_n_vocab(n)
-#           add progress saving feature to download_n_vocab
-#       2.download_all_vocab()
+#TODO:add progress saving feature to download_n_vocab
+
+
+def download_n_vocab(n,overwrite = False,file_out=""):
+    n_pages = [68,36,63,12,12]
+    pages = n_pages[n-1]
+    vocab=[]
+    if file_out == "":
+        file_out = f"N{n}.json"
+
+    if(file_out not in os.listdir() or overwrite==True):
+        for page in range(pages):
+            print(f"N{n},Page {page+1} of {pages}")
+            v = get_vocab(n,page+1)
+            for i in v:
+                vocab.append(i)
+
+        with open(file_out, 'w') as f:
+            json.dump(vocab, f)
+            print(f"Downloading vocab finished. \nSaved vocab into {file_out}.")
+    else:
+        print(f"Warning: {file_out} already generated.\n If you want to overwrite it please use download_all_vocab(overwrite=True)")
+    return vocab
+
+def load_n_vocab(n,file_in=""):
+    if file_in == "":
+        file_in = f"N{n}.json"
+    if file_in in os.listdir():
+        with open(file_in) as f:
+            return json.load(vocab, f)
+    else:
+        raise FileNotFoundError(f"{file_in} does not exist. Have you downloaded it with download_n_vocab()?")
+
+def load_all_vocab(file_in="vocab.json"):
+    if file_in in os.listdir():
+        with open(file_in) as f:
+            return json.load(vocab, f)
+    else:
+        raise FileNotFoundError(f"{file_in} does not exist. Have you downloaded it with download_all_vocab()?")
 
 
 def download_all_vocab(overwrite = False,file_out="vocab.json"):
-    #downloads vocab from list N1 - N5 and saves it to
+    #downloads vocab from list N1 - N5 and saves it to file_out
     #overwrite argument decides if files with the same file name as file_out get overwritten or not
     #file_out argument is the file name where the downloaded data is saved
-
     vocab = {}
-    if(file_out not in os.listdir() or overwrite==True):
-        for n,pages in enumerate(pages_per_n):
-            N = []
-            for page in range(pages):
-                print(f"N{n+1},Page {page+1} of {pages}")
-                v = get_vocab(n+1,page+1)
-                for i in v:
-                    N.append(i)
-            vocab["n"+str(n+1)]=N
-        with open(file_out, 'w') as f:
-            json.dump(vocab, f)
-        print(f"Downloading vocab finished. \nSaved vocab into {file_out}.")
-    else:
-        print(f"{file_out} already generated.\n If you want to overwrite it please use download_all_vocab(overwrite=True)")
+    for n in range(1,6):
+        vocab[f"N{n}"] = download_n_vocab(n,overwrite = overwrite)
+    with open(file_out, 'w') as f:
+        json.dump(vocab, f)
+    return vocab
 
 if __name__ == "__main__":
     download_all_vocab()

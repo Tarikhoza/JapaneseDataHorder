@@ -2,12 +2,12 @@ import geckodriver_autoinstaller
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from PIL import Image
 from time import sleep
 import os
 import shutil
 from pathlib import Path
-from selenium.webdriver.firefox.options import Options as FirefoxOptions
 
 #set options
 #set webdriver to be headless, it means to make it invisble and in work in backgound
