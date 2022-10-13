@@ -1,0 +1,573 @@
+1664027338870	geckodriver	INFO	Listening on 127.0.0.1:47825
+1664027339423	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "46789" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile1pORYP"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+1664027340032	Marionette	INFO	Marionette enabled
+1664027340035	Marionette	INFO	Listening on port 33845
+WebDriver BiDi listening on ws://localhost:46789
+Read port: 33845
+1664027340251	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile1pORYP/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:46789/devtools/browser/de059fb7-37e7-4187-9933-cd8174512225
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+console.error: "Error during quit-application-granted: [Exception... \"File error: Not found\"  nsresult: \"0x80520012 (NS_ERROR_FILE_NOT_FOUND)\"  location: \"JS frame :: resource:///modules/BrowserGlue.jsm :: _onQuitApplicationGranted/tasks< :: line 2013\"  data: no]"
+1664027434452	Marionette	INFO	Stopped listening on port 33845
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1664027455033	geckodriver	INFO	Listening on 127.0.0.1:43923
+1664027455583	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "42283" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileNnfqG4"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+1664027456179	Marionette	INFO	Marionette enabled
+1664027456182	Marionette	INFO	Listening on port 39929
+Read port: 39929
+WebDriver BiDi listening on ws://localhost:42283
+1664027456277	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileNnfqG4/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:42283/devtools/browser/0bff46ea-57ee-4414-a35b-459c0e1111f3
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+console.error: "Error during quit-application-granted: [Exception... \"File error: Not found\"  nsresult: \"0x80520012 (NS_ERROR_FILE_NOT_FOUND)\"  location: \"JS frame :: resource:///modules/BrowserGlue.jsm :: _onQuitApplicationGranted/tasks< :: line 2013\"  data: no]"
+1664027551939	Marionette	INFO	Stopped listening on port 39929
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+Sandbox: Unexpected EOF, op 0 flags 00 path /proc/cpuinfo
+1664027554975	geckodriver	INFO	Listening on 127.0.0.1:52435
+1664027555530	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "53637" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileKs1Thh"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+1664027556124	Marionette	INFO	Marionette enabled
+1664027556128	Marionette	INFO	Listening on port 34913
+Read port: 34913
+WebDriver BiDi listening on ws://localhost:53637
+1664027556224	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileKs1Thh/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:53637/devtools/browser/4c7ed56f-ab5f-43ac-9a12-1d71d12acb51
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lNPcL4AZZQ8z9NJpy71wtXJu_aTy2V1-RO76Pd5QcdQ.js line 2 > eval line 4041 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lNPcL4AZZQ8z9NJpy71wtXJu_aTy2V1-RO76Pd5QcdQ.js line 2 > eval line 7225 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.google.com."
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lNPcL4AZZQ8z9NJpy71wtXJu_aTy2V1-RO76Pd5QcdQ.js line 2 > eval line 3246 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1664027935383	geckodriver	INFO	Listening on 127.0.0.1:33317
+1664027935936	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "45395" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileJtSUyE"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+1664027936527	Marionette	INFO	Marionette enabled
+1664027936530	Marionette	INFO	Listening on port 42465
+WebDriver BiDi listening on ws://localhost:45395
+Read port: 42465
+1664027936630	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileJtSUyE/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:45395/devtools/browser/2b67fce3-b66f-4faa-ad03-a669a6b859d6
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+console.error: "Error during quit-application-granted: [Exception... \"File error: Not found\"  nsresult: \"0x80520012 (NS_ERROR_FILE_NOT_FOUND)\"  location: \"JS frame :: resource:///modules/BrowserGlue.jsm :: _onQuitApplicationGranted/tasks< :: line 2013\"  data: no]"
+1664027939712	Marionette	INFO	Stopped listening on port 34913
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+console.error: "Error during quit-application-granted: [Exception... \"File error: Not found\"  nsresult: \"0x80520012 (NS_ERROR_FILE_NOT_FOUND)\"  location: \"JS frame :: resource:///modules/BrowserGlue.jsm :: _onQuitApplicationGranted/tasks< :: line 2013\"  data: no]"
+1664028071759	Marionette	INFO	Stopped listening on port 42465
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1664028101387	geckodriver	INFO	Listening on 127.0.0.1:45473
+1664028101940	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "56945" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile6vXKam"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+1664028102538	Marionette	INFO	Marionette enabled
+1664028102541	Marionette	INFO	Listening on port 38727
+WebDriver BiDi listening on ws://localhost:56945
+Read port: 38727
+1664028102753	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile6vXKam/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:56945/devtools/browser/addc3af7-9119-4379-bc38-f4b947ddd558
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lNPcL4AZZQ8z9NJpy71wtXJu_aTy2V1-RO76Pd5QcdQ.js line 2 > eval line 3702 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+console.error: "Error during quit-application-granted: [Exception... \"File error: Not found\"  nsresult: \"0x80520012 (NS_ERROR_FILE_NOT_FOUND)\"  location: \"JS frame :: resource:///modules/BrowserGlue.jsm :: _onQuitApplicationGranted/tasks< :: line 2013\"  data: no]"
+1664028303949	Marionette	INFO	Stopped listening on port 38727
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+Sandbox: Unexpected EOF, op 0 flags 00 path /proc/cpuinfo
+1664028306087	geckodriver	INFO	Listening on 127.0.0.1:35255
+1664028306640	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "37565" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile0V6AWh"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+1664028307236	Marionette	INFO	Marionette enabled
+1664028307239	Marionette	INFO	Listening on port 44723
+Read port: 44723
+WebDriver BiDi listening on ws://localhost:37565
+1664028307336	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile0V6AWh/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:37565/devtools/browser/a49c664a-7caf-44ba-bd0a-0936f0626a60
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+console.error: "Error during quit-application-granted: [Exception... \"File error: Not found\"  nsresult: \"0x80520012 (NS_ERROR_FILE_NOT_FOUND)\"  location: \"JS frame :: resource:///modules/BrowserGlue.jsm :: _onQuitApplicationGranted/tasks< :: line 2013\"  data: no]"
+1664028391993	Marionette	INFO	Stopped listening on port 44723
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+Sandbox: Unexpected EOF, op 0 flags 00 path /proc/cpuinfo
+1664028398907	geckodriver	INFO	Listening on 127.0.0.1:58495
+1664028399460	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "59763" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileHlImO3"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+1664028400056	Marionette	INFO	Marionette enabled
+1664028400059	Marionette	INFO	Listening on port 37181
+Read port: 37181
+WebDriver BiDi listening on ws://localhost:59763
+1664028400156	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileHlImO3/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:59763/devtools/browser/1b21248d-846f-4a6c-ad22-35788ce47260
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+console.error: "Error during quit-application-granted: [Exception... \"File error: Not found\"  nsresult: \"0x80520012 (NS_ERROR_FILE_NOT_FOUND)\"  location: \"JS frame :: resource:///modules/BrowserGlue.jsm :: _onQuitApplicationGranted/tasks< :: line 2013\"  data: no]"
+1664028635993	Marionette	INFO	Stopped listening on port 37181
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+Sandbox: Unexpected EOF, op 0 flags 00 path /proc/cpuinfo
+1664028638176	geckodriver	INFO	Listening on 127.0.0.1:60259
+1664028638730	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "33553" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile3G3LtX"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+1664028639325	Marionette	INFO	Marionette enabled
+1664028639328	Marionette	INFO	Listening on port 38129
+Read port: 38129
+WebDriver BiDi listening on ws://localhost:33553
+1664028639425	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile3G3LtX/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:33553/devtools/browser/760d1c8a-b244-44a7-8921-65b638dd2ca2
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+1664028687329	geckodriver	INFO	Listening on 127.0.0.1:50325
+1664028687883	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "34219" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileZJOkMv"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+1664028688486	Marionette	INFO	Marionette enabled
+1664028688490	Marionette	INFO	Listening on port 39707
+WebDriver BiDi listening on ws://localhost:34219
+Read port: 39707
+1664028688704	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileZJOkMv/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:34219/devtools/browser/c9c90997-dc48-4217-8ffe-7ee5a3377d15
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+console.error: "Error during quit-application-granted: [Exception... \"File error: Not found\"  nsresult: \"0x80520012 (NS_ERROR_FILE_NOT_FOUND)\"  location: \"JS frame :: resource:///modules/BrowserGlue.jsm :: _onQuitApplicationGranted/tasks< :: line 2013\"  data: no]"
+1664028700991	Marionette	INFO	Stopped listening on port 38129
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+Sandbox: Unexpected EOF, op 0 flags 00 path /proc/cpuinfo
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+console.error: "Error during quit-application-granted: [Exception... \"File error: Not found\"  nsresult: \"0x80520012 (NS_ERROR_FILE_NOT_FOUND)\"  location: \"JS frame :: resource:///modules/BrowserGlue.jsm :: _onQuitApplicationGranted/tasks< :: line 2013\"  data: no]"
+1664029832627	Marionette	INFO	Stopped listening on port 39707
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1664029940736	geckodriver	INFO	Listening on 127.0.0.1:42759
+1664029941294	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "41097" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileNMQXk2"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+1664029941886	Marionette	INFO	Marionette enabled
+1664029941890	Marionette	INFO	Listening on port 43139
+WebDriver BiDi listening on ws://localhost:41097
+Read port: 43139
+1664029941986	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileNMQXk2/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:41097/devtools/browser/c0d84b0f-0bb8-40ad-8bcf-9191b36d824a
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1664030168272	geckodriver	INFO	Listening on 127.0.0.1:53717
+1664030168831	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "58173" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilelttIU8"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+1664030169421	Marionette	INFO	Marionette enabled
+1664030169424	Marionette	INFO	Listening on port 33789
+WebDriver BiDi listening on ws://localhost:58173
+Read port: 33789
+1664030169521	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilelttIU8/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:58173/devtools/browser/a073a5b4-703f-467d-a0e2-239a22272c3f
+1664030186924	geckodriver	INFO	Listening on 127.0.0.1:45825
+1664030187477	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "42969" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileMnkVlm"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+1664030188073	Marionette	INFO	Marionette enabled
+1664030188076	Marionette	INFO	Listening on port 36121
+Read port: 36121
+WebDriver BiDi listening on ws://localhost:42969
+1664030188173	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileMnkVlm/search.json.mozlz4", (void 0)))
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:42969/devtools/browser/28a993ea-535a-45db-8575-f64b4e96145e
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+console.error: "Error during quit-application-granted: [Exception... \"File error: Not found\"  nsresult: \"0x80520012 (NS_ERROR_FILE_NOT_FOUND)\"  location: \"JS frame :: resource:///modules/BrowserGlue.jsm :: _onQuitApplicationGranted/tasks< :: line 2013\"  data: no]"
+1664030194334	Marionette	INFO	Stopped listening on port 33789
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+Sandbox: Unexpected EOF, op 0 flags 00 path /proc/cpuinfo
+1664030295454	geckodriver	INFO	Listening on 127.0.0.1:48377
+1664030296008	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "43885" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile2dqv45"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+1664030296598	Marionette	INFO	Marionette enabled
+1664030296601	Marionette	INFO	Listening on port 46703
+WebDriver BiDi listening on ws://localhost:43885
+Read port: 46703
+1664030296698	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile2dqv45/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:43885/devtools/browser/8b321ad6-8d71-40be-aa64-c398aea4627c
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+console.error: "Error during quit-application-granted: [Exception... \"File error: Not found\"  nsresult: \"0x80520012 (NS_ERROR_FILE_NOT_FOUND)\"  location: \"JS frame :: resource:///modules/BrowserGlue.jsm :: _onQuitApplicationGranted/tasks< :: line 2013\"  data: no]"
+1664030299934	Marionette	INFO	Stopped listening on port 36121
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+1664030333702	geckodriver	INFO	Listening on 127.0.0.1:35241
+1664030334257	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "38375" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile2iUr9K"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+1664030334855	Marionette	INFO	Marionette enabled
+1664030334858	Marionette	INFO	Listening on port 44981
+WebDriver BiDi listening on ws://localhost:38375
+Read port: 44981
+1664030335070	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile2iUr9K/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:38375/devtools/browser/a4a3fa14-bae3-4fe4-9a3a-c3e72db869e3
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+console.error: "Error during quit-application-granted: [Exception... \"File error: Not found\"  nsresult: \"0x80520012 (NS_ERROR_FILE_NOT_FOUND)\"  location: \"JS frame :: resource:///modules/BrowserGlue.jsm :: _onQuitApplicationGranted/tasks< :: line 2013\"  data: no]"
+1664030358453	Marionette	INFO	Stopped listening on port 44981
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+Sandbox: Unexpected EOF, op 0 flags 00 path /proc/cpuinfo
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+console.error: "Error during quit-application-granted: [Exception... \"File error: Not found\"  nsresult: \"0x80520012 (NS_ERROR_FILE_NOT_FOUND)\"  location: \"JS frame :: resource:///modules/BrowserGlue.jsm :: _onQuitApplicationGranted/tasks< :: line 2013\"  data: no]"
+1664030359258	Marionette	INFO	Stopped listening on port 46703
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1664030361808	geckodriver	INFO	Listening on 127.0.0.1:55909
+1664030362364	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "55235" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile3hXXcN"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+1664030362960	Marionette	INFO	Marionette enabled
+1664030362964	Marionette	INFO	Listening on port 33783
+Read port: 33783
+WebDriver BiDi listening on ws://localhost:55235
+1664030363060	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile3hXXcN/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:55235/devtools/browser/fd1c8f41-c1a5-4d1d-aa99-84158983282e
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1664030390793	geckodriver	INFO	Listening on 127.0.0.1:40441
+1664030391347	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "37409" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilezp2Kwt"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+1664030391942	Marionette	INFO	Marionette enabled
+1664030391945	Marionette	INFO	Listening on port 36577
+Read port: 36577
+WebDriver BiDi listening on ws://localhost:37409
+1664030392042	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilezp2Kwt/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:37409/devtools/browser/0919328d-ef23-4c29-a2f6-a4e36dee03b2
+1664030420898	geckodriver	INFO	Listening on 127.0.0.1:41103
+1664030421450	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "57463" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilegYFweN"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+1664030422045	Marionette	INFO	Marionette enabled
+1664030422048	Marionette	INFO	Listening on port 46277
+Read port: 46277
+WebDriver BiDi listening on ws://localhost:57463
+1664030422145	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilegYFweN/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:57463/devtools/browser/b25a914c-bbec-4a8b-8928-b6d9faaadea6
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+console.error: "Error during quit-application-granted: [Exception... \"File error: Not found\"  nsresult: \"0x80520012 (NS_ERROR_FILE_NOT_FOUND)\"  location: \"JS frame :: resource:///modules/BrowserGlue.jsm :: _onQuitApplicationGranted/tasks< :: line 2013\"  data: no]"
+1664030426411	Marionette	INFO	Stopped listening on port 46277
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+console.error: "Error during quit-application-granted: [Exception... \"File error: Not found\"  nsresult: \"0x80520012 (NS_ERROR_FILE_NOT_FOUND)\"  location: \"JS frame :: resource:///modules/BrowserGlue.jsm :: _onQuitApplicationGranted/tasks< :: line 2013\"  data: no]"
+1664030427283	Marionette	INFO	Stopped listening on port 36577
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1664030499854	geckodriver	INFO	Listening on 127.0.0.1:40069
+1664030500407	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "60399" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilejp5SfL"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+1664030500998	Marionette	INFO	Marionette enabled
+1664030501001	Marionette	INFO	Listening on port 45183
+WebDriver BiDi listening on ws://localhost:60399
+Read port: 45183
+1664030501098	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilejp5SfL/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:60399/devtools/browser/a151fe4d-f9db-409b-9f15-d0d5ab3aaa46
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+console.error: "Error during quit-application-granted: [Exception... \"File error: Not found\"  nsresult: \"0x80520012 (NS_ERROR_FILE_NOT_FOUND)\"  location: \"JS frame :: resource:///modules/BrowserGlue.jsm :: _onQuitApplicationGranted/tasks< :: line 2013\"  data: no]"
+1664030667930	Marionette	INFO	Stopped listening on port 45183
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1664030670065	geckodriver	INFO	Listening on 127.0.0.1:44023
+1664030670624	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "38319" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofiler9Fiob"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+1664030671217	Marionette	INFO	Marionette enabled
+1664030671220	Marionette	INFO	Listening on port 40863
+Read port: 40863
+WebDriver BiDi listening on ws://localhost:38319
+1664030671317	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofiler9Fiob/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:38319/devtools/browser/651d7abd-6bb9-4132-b210-47aa920f4d5e
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+console.error: "Error during quit-application-granted: [Exception... \"File error: Not found\"  nsresult: \"0x80520012 (NS_ERROR_FILE_NOT_FOUND)\"  location: \"JS frame :: resource:///modules/BrowserGlue.jsm :: _onQuitApplicationGranted/tasks< :: line 2013\"  data: no]"
+1664031098313	Marionette	INFO	Stopped listening on port 40863
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+Sandbox: Unexpected EOF, op 0 flags 00 path /proc/cpuinfo
+1664031100207	geckodriver	INFO	Listening on 127.0.0.1:46495
+1664031100760	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "55837" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilev4begr"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+1664031101352	Marionette	INFO	Marionette enabled
+1664031101355	Marionette	INFO	Listening on port 36587
+Read port: 36587
+WebDriver BiDi listening on ws://localhost:55837
+1664031101454	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilev4begr/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:55837/devtools/browser/f708183d-4944-4ba6-9577-1510621e72ce
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1664031237854	geckodriver	INFO	Listening on 127.0.0.1:60097
+1664031238407	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "51847" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilejp8NWO"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+1664031239000	Marionette	INFO	Marionette enabled
+1664031239003	Marionette	INFO	Listening on port 35659
+Read port: 35659
+WebDriver BiDi listening on ws://localhost:51847
+1664031239099	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilejp8NWO/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:51847/devtools/browser/6ce9bf16-c253-4353-8ca0-1a485f5d1e4e
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1664031342199	geckodriver	INFO	Listening on 127.0.0.1:59205
+1664031342750	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "34491" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileVI118U"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+1664031343342	Marionette	INFO	Marionette enabled
+1664031343345	Marionette	INFO	Listening on port 44253
+WebDriver BiDi listening on ws://localhost:34491
+Read port: 44253
+1664031343443	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileVI118U/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:34491/devtools/browser/507a7cad-ca2f-4ec1-b1c1-aa808377c730
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1664642160056	geckodriver	INFO	Listening on 127.0.0.1:38281
+1664642160641	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "33671" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileHLPDc6"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+1664642161238	Marionette	INFO	Marionette enabled
+1664642161241	Marionette	INFO	Listening on port 42521
+Read port: 42521
+WebDriver BiDi listening on ws://127.0.0.1:33671
+1664642161335	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileHLPDc6/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://127.0.0.1:33671/devtools/browser/882a232c-7e16-455c-a552-15b5d2bf29c6
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.gavo.t.u-tokyo.ac.jp."
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+console.error: "Error during quit-application-granted: [Exception... \"File error: Not found\"  nsresult: \"0x80520012 (NS_ERROR_FILE_NOT_FOUND)\"  location: \"JS frame :: resource:///modules/BrowserGlue.jsm :: _onQuitApplicationGranted/tasks< :: line 2009\"  data: no]"
+1664643679445	Marionette	INFO	Stopped listening on port 42521
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
