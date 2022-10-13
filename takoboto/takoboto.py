@@ -10,7 +10,15 @@ import json
 
 options = FirefoxOptions()
 options.add_argument('-headless')
-driver = webdriver.Firefox(options=options)
+
+if os.name == "nt":
+    driver_path=os.path.join(os.getcwd(),"geckodriver.exe")
+    driver = webdriver.Firefox(options=options,executable_path=driver_path)
+else:
+    driver = webdriver.Firefox(options=options)
+
+
+
 
 URL = "https://takoboto.jp/lists/study/n{}vocab/?page={}"
 WORD_URL = "https://takoboto.jp/?w={}"
