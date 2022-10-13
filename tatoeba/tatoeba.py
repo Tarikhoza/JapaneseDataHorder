@@ -19,6 +19,8 @@ sys.path.append(package_root)
 
 from ichimoe.ichimoe_deconstructor import deconstruct
 
+
+
 #set options
 #set webdriver to be headless, it means to make it invisble and in work in backgound
 options = FirefoxOptions()
@@ -32,6 +34,13 @@ profile.set_preference("browser.download.folderList", 2)
 profile.set_preference("browser.download.manager.showWhenStarting", False)
 profile.set_preference("browser.download.dir", os.path.join(os.getcwd(),"download"))
 profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream")
+
+if os.name == "nt":
+    driver_path=os.path.join(os.getcwd(),"geckodriver.exe")
+    driver = webdriver.Firefox(options=options,executable_path=driver_path)
+else:
+    driver = webdriver.Firefox(options=options)
+
 
 #intialising driver
 

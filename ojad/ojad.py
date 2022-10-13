@@ -23,8 +23,15 @@ profile.set_preference("browser.download.manager.showWhenStarting", False)
 profile.set_preference("browser.download.dir", os.path.join(os.getcwd(),"download"))
 profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream")
 
-#intialising driver
-driver = webdriver.Firefox(options=options,firefox_profile=profile)
+
+if os.name == "nt":
+    driver_path=os.path.join(os.getcwd(),"geckodriver.exe")
+    driver = webdriver.Firefox(options=options,executable_path=driver_path)
+else:
+    driver = webdriver.Firefox(options=options)
+
+
+
 
 def key_out_background(file_name):
     img = Image.open(file_name)
