@@ -24,7 +24,7 @@ from ichimoe.ichimoe import deconstruct
 #set options
 #set webdriver to be headless, it means to make it invisble and in work in backgound
 options = FirefoxOptions()
-#options.add_argument('-headless')
+options.add_argument('-headless')
 #install webdriver if needed
 #geckodriver_autoinstaller.install()
 
