@@ -162,7 +162,7 @@ def download_all_vocab(overwrite = False,file_out="vocab.json"):
     #overwrite argument decides if files with the same file name as file_out get overwritten or not
     #file_out argument is the file name where the downloaded data is saved
     vocab = {}
-    if file_out not in os.listdir()
+    if file_out not in os.listdir():
         for n in range(1,6):
             vocab[f"N{n}"] = download_n_vocab(n,overwrite = overwrite)
         with open(file_out, 'w') as f:
