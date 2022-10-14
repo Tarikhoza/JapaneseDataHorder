@@ -167,6 +167,7 @@ def download_all_vocab(overwrite = False,file_out="vocab.json"):
             vocab[f"N{n}"] = download_n_vocab(n,overwrite = overwrite)
         with open(file_out, 'w') as f:
             json.dump(vocab, f)
-    return download_all_vocab()
+        return vocab
+    return load_all_vocab(file_out="vocab.json")
 
 
