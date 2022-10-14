@@ -152,7 +152,7 @@ def load_n_vocab(n,file_in=""):
 def load_all_vocab(file_in="vocab.json"):
     if file_in in os.listdir():
         with open(file_in) as f:
-            return json.load(vocab, f)
+            return json.load(f)
     else:
         raise FileNotFoundError(f"{file_in} does not exist. Have you downloaded it with download_all_vocab()?")
 
