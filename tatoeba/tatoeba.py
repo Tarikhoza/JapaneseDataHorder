@@ -12,8 +12,6 @@ import shutil
 import requests
 import geckodriver_autoinstaller
 
-
-
 package_root = os.path.dirname(os.path.realpath(__file__))+"/.."
 sys.path.append(package_root)
 
@@ -34,12 +32,7 @@ profile.set_preference("browser.download.folderList", 2)
 profile.set_preference("browser.download.manager.showWhenStarting", False)
 profile.set_preference("browser.download.dir", os.path.join(os.getcwd(),"download"))
 profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream")
-
-if os.name == "nt":
-    driver_path=os.path.join(os.getcwd(),"geckodriver.exe")
-    driver = webdriver.Firefox(options=options,executable_path=driver_path)
-else:
-    driver = webdriver.Firefox(options=options)
+driver = webdriver.Firefox(options=options)
 
 
 #intialising driver
@@ -47,7 +40,7 @@ else:
 TATOEBA_FILENAME = "tatoeba.tsv"
 
 def download_sentence_pairs(s_language="Japanese", t_language="English",file_out="tatoeba.tsv"):
-    print("Downloading sentence pairs from tatoeba.com")
+    print("Downloading sentence pairs from tatoeba.org")
     driver = webdriver.Firefox(options=options,firefox_profile=profile)
     driver.get("https://tatoeba.org/en/downloads")
     sleep(2)
@@ -56,7 +49,7 @@ def download_sentence_pairs(s_language="Japanese", t_language="English",file_out
     driver.find_element(By.ID,"input-911").send_keys(t_language,Keys.RETURN)
     sleep(1)
     driver.find_element(By.ID,"custom-export").find_elements(By.TAG_NAME,"button")[4].click()
-    print("Waiting collection to be compiled...")
+    print("Waiting collection to be compiled")
     sleep(5)
     driver.find_element(By.ID,"custom-export").find_elements(By.TAG_NAME,"button")[4].click()
     if "download" not in os.listdir():
@@ -65,6 +58,7 @@ def download_sentence_pairs(s_language="Japanese", t_language="English",file_out
         shutil.rmtree("download")
     sleep(1)
     while len(os.listdir("download"))==0:
+        print(".",end="")
         sleep(1)
 
     file_to_move = os.path.join("download",os.listdir("download")[0])
@@ -160,7 +154,7 @@ def get_sentences(word,amount=10):
     return ret
 
 #TODO: convert main into functions, extend_n
-def main():
+def get_sentences_for_all_vocab():
     if "cache.json" not in os.listdir():
         os.system("echo '{}' > cache.json")
 
@@ -202,6 +196,3 @@ def main():
             os.mkdir("extended")
         with open(f'extended/n{str(n+1)}.json', 'w') as f:
             json.dump(n_vocab, f)
-
-if __name__ == "__main__":
-    main()

@@ -168,5 +168,4 @@ def download_all_vocab(overwrite = False,file_out="vocab.json"):
         json.dump(vocab, f)
     return vocab
 
-if __name__ == "__main__":
-    download_all_vocab()
+

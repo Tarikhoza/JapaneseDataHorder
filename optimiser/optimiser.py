@@ -4,6 +4,10 @@ from pprint import pprint as pp
 import numpy as np
 import matplotlib.pyplot as plt
 import os
+from PIL import Image
+import PIL
+import sys
+
 
 kanji_ranges = [
         ( 0x4E00,  0x62FF),
@@ -139,7 +143,7 @@ def best_sentence(word):
         return sorted(word["examples"], key = lambda s:s["rating"])[-1]
 
 
-def optimise(file_in,file_out,dep = set(), throw_out=True,order="normal", shuffle_list=True):
+def optimise(file_in,file_out,dep = set(), throw_out=True,order="normal"):
     #file_in is the file name that should be loaded, it is a string
     #file_out is the file name that the optimsed list should be saved, it is a string
     #dep is the dependency set, is is a set of strings
@@ -206,18 +210,42 @@ def optimise(file_in,file_out,dep = set(), throw_out=True,order="normal", shuffl
         json.dump(optimised, fp)
 
     print(f"Optimised {file_in} with {len(no_sentence_words)} words without sentences")
-    print("\n\n\n")
     return optimised, dep
 
+
+
+def savefig(optimised,title,path):
+    plt.suptitle(f"{order} - Score:{rating}")
+    plt.title(title)
+    plt.xlabel("Word")
+    plt.ylabel("Difficulty")
+    plt.plot(list(map(lambda word:word["min_rating"],optimised)))
+    plt.savefig(path, bbox_inches='tight')
+
+def merge_images(images,file_out="graph.png"):
+    imgs    = [ Image.open(i) for i in images]
+# pick the image which is the smallest, and resize the others to match it (can be arbitrary image shape here)
+    min_shape = sorted( [(np.sum(i.size), i.size ) for i in imgs])[0][1]
+    imgs_comb = np.hstack( (np.asarray( i.resize(min_shape) ) for i in imgs ) )
+
+# save that beautiful picture
+    imgs_comb = Image.fromarray( imgs_comb)
+    imgs_comb.save(file_out)
+
+# for a vertical stacking it is simple: use vstack
+#    imgs_comb = np.vstack( (np.asarray( i.resize(min_shape) ) for i in imgs ) )
+#    imgs_comb = Image.fromarray( imgs_comb)
+#    imgs_comb.save( 'Trifecta_vertical.jpg' )
 
 def optimise_all(order="normal",shuffle_list=True):
     if "optimised" not in os.listdir():
         os.mkdir("optimised")
-    optimised_n5, dep = optimise("n5.json","optimised/optimised_n5.json", shuffle_list=shuffle_list)
-    optimised_n4, dep = optimise("n4.json","optimised/optimised_n4.json", shuffle_list=shuffle_list, dep=dep)
-    optimised_n3, dep = optimise("n3.json","optimised/optimised_n3.json", shuffle_list=shuffle_list, dep=dep)
-    optimised_n2, dep = optimise("n2.json","optimised/optimised_n2.json", shuffle_list=shuffle_list, dep=dep)
-    optimised_n1, dep = optimise("n1.json","optimised/optimised_n1.json", shuffle_list=shuffle_list, dep=dep)
+
+    optimised_n5, dep = optimise("n5.json","optimised/optimised_n5.json",order=order)
+    optimised_n4, dep = optimise("n4.json","optimised/optimised_n4.json",order=order, dep=dep)
+    optimised_n3, dep = optimise("n3.json","optimised/optimised_n3.json",order=order, dep=dep)
+    optimised_n2, dep = optimise("n2.json","optimised/optimised_n2.json",order=order, dep=dep)
+    optimised_n1, dep = optimise("n1.json","optimised/optimised_n1.json",order=order, dep=dep)
 
     rating = rate_optimised([
         optimised_n5,
@@ -227,62 +255,20 @@ def optimise_all(order="normal",shuffle_list=True):
         optimised_n1
     ])
 
-    plt.suptitle(f"{order} - Score:{rating}")
+    savefig(optimised_n5,"N5","optimised/N5graph.png")
+    savefig(optimised_n4,"N4","optimised/N4graph.png")
+    savefig(optimised_n3,"N3","optimised/N3graph.png")
+    savefig(optimised_n2,"N2","optimised/N4graph.png")
+    savefig(optimised_n1,"N1","optimised/N1graph.png")
 
-    plt.subplot(2, 3, 1)
-    plt.title("N5")
-    plt.xlabel("Word")
-    plt.ylabel("Difficulty")
-    plt.plot(list(map(lambda word:word["min_rating"],optimised_n5)))
+    merge_images([
+        "optimised/N5graph.png",
+        "optimised/N4graph.png",
+        "optimised/N3graph.png",
+        "optimised/N4graph.png",
+        "optimised/N1graph.png",
+        ])
 
-    plt.subplot(2, 3, 2)
-    plt.title("N4")
-    plt.xlabel("Word")
-    plt.ylabel("Difficulty")
-    plt.plot(list(map(lambda word:word["min_rating"],optimised_n4)))
-
-
-    plt.subplot(2, 3, 3)
-    plt.title("N3")
-    plt.xlabel("Word")
-    plt.ylabel("Difficulty")
-    plt.plot(list(map(lambda word:word["min_rating"],optimised_n3)))
-
-    plt.subplot(2, 3, 4)
-    plt.title("N2")
-    plt.xlabel("Word")
-    plt.ylabel("Difficulty")
-    plt.plot(list(map(lambda word:word["min_rating"],optimised_n2)))
-
-    plt.subplot(2, 3, 5)
-    plt.title("N1")
-    plt.xlabel("Word")
-    plt.ylabel("Difficulty")
-    plt.plot(list(map(lambda word:word["min_rating"],optimised_n1)))
-
-    plt.subplot(2, 3, 6)
-    plt.title("N1 - N5")
-    plt.xlabel("Word")
-    plt.ylabel("Difficulty")
-
-    plt.plot(list(map(lambda word:word["min_rating"],optimised_n5)))
-    plt.plot(list(map(lambda word:word["min_rating"],optimised_n4)))
-    plt.plot(list(map(lambda word:word["min_rating"],optimised_n3)))
-    plt.plot(list(map(lambda word:word["min_rating"],optimised_n2)))
-    plt.plot(list(map(lambda word:word["min_rating"],optimised_n1)))
-
-    plt.savefig('optimised/graph.png', bbox_inches='tight')
     os.rename("optimised","optimised "+str(rating))
 
     print("Optimised with rating:",rating)
-
-if __name__ == "__main__":
-    optimise_all(order="normal")
-    optimise_all(order="shuffle")
-    optimise_all(order="heisig")
-    optimise_all(order="kklc")
-
-
-
-
-
