@@ -168,6 +168,6 @@ def download_all_vocab(overwrite = False,file_out="vocab.json"):
         with open(file_out, 'w') as f:
             json.dump(vocab, f)
         return vocab
-    return load_all_vocab(file_out="vocab.json")
+    return load_all_vocab(file_in = file_out)
 
 
