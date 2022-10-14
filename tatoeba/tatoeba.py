@@ -134,7 +134,7 @@ def get_sentences(word,amount=10):
     print(word)
 
     for sentence in sentences:
-        if len(sentenece)<4:
+        if len(sentence)<4:
             continue
         if (len(sentence[1])-len(sentence[1].replace("「","").replace("」","")))%2==0:
             dec_sentence=get_destruction(sentence[1])
