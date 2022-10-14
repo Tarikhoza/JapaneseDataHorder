@@ -17,7 +17,7 @@ import geckodriver_autoinstaller
 package_root = os.path.dirname(os.path.realpath(__file__))+"/.."
 sys.path.append(package_root)
 
-from ichimoe.ichimoe_deconstructor import deconstruct
+from ichimoe.ichimoe import deconstruct
 
 
 
