@@ -55,12 +55,12 @@ def clean_word(word):
 
 def sentence_difficulty(sentence_with_desturction):
     word_difficulties = []
-    for word in sentence_with_desturction:
+    for word in sentence_with_desturction["destruction"]:
         for n in range(1,6):
             n_vocab = load_n(f"extended/n{n}.json")
             #pun not intended
             for n_word in n_vocab:
-                if clean_word(word["word"]) in n_word:
+                if clean_word(word["word"]) in " ".join(n_word["writings"]):
                     word_difficulties.append(n)
                     break
                     break
