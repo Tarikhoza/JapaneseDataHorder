@@ -101,7 +101,6 @@ def rate_sentence(word, dep):
     #gives every sentence a rating
     #lower is better
     # if there are no sentences for the word give max rating of 999999 is given
-
     ratings = []
 
     if(len(word["examples"]) == 0):
@@ -112,10 +111,7 @@ def rate_sentence(word, dep):
     for sentence in word["examples"]:
         try:
             sentence_words = set(map(lambda w:clean_word(w["word"]),sentence["destruction"]))
-            if(len(sentence_words-dep)==0):
-                sentence["rating"] = 999999
-            else:
-                sentence["rating"] = len(sentence_words-dep)
+            sentence["rating"] = len(sentence_words-dep)
             ratings.append(sentence["rating"])
         except:
             sentence["rating"] = 999999
@@ -258,14 +254,14 @@ def optimise_all(order="normal",shuffle_list=True):
     savefig(optimised_n5,"N5",order,rating,"optimised/N5graph.png")
     savefig(optimised_n4,"N4",order,rating,"optimised/N4graph.png")
     savefig(optimised_n3,"N3",order,rating,"optimised/N3graph.png")
-    savefig(optimised_n2,"N2",order,rating,"optimised/N4graph.png")
+    savefig(optimised_n2,"N2",order,rating,"optimised/N2graph.png")
     savefig(optimised_n1,"N1",order,rating,"optimised/N1graph.png")
 
     merge_images([
         "optimised/N5graph.png",
         "optimised/N4graph.png",
         "optimised/N3graph.png",
-        "optimised/N4graph.png",
+        "optimised/N2graph.png",
         "optimised/N1graph.png",
         ])
 
