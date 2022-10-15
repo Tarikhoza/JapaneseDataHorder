@@ -274,5 +274,5 @@ def load_n(n_path):
 
 def print_n(n,amount):
     for i in range(amount):
-        pp(" ".join(n[i]["word"]))
+        pp(" ".join(n[i]["writing"]))
         pp(best_sentence(n[i])["text"],best_sentence(n[i])["rating"])
