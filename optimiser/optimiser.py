@@ -128,13 +128,13 @@ def rate_sentence(word, dep):
         sentence_difficulty(sentence)
         try:
             sentence_words = set(map(lambda w:clean_word(w["word"]),sentence["destruction"]))
-            sentence["rating"] = len(sentence_words)-len(sentence_words&dep)+(5-sentence["difficulty"])
+            sentence["rating"] = len(sentence_words)-len(sentence_words&dep)
             ratings.append(sentence["rating"])
         except:
             sentence["rating"] = 999999
     word["min_rating"] = min(ratings)
     word["max_rating"] = max(ratings)
-    word["dep"]=len(dep)
+    word["dep"] = len(dep)
     return word["min_rating"]
 
 def rate_optimised(optimised_list):
