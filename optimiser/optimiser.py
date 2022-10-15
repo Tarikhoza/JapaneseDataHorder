@@ -266,5 +266,13 @@ def optimise_all(order="normal",shuffle_list=True):
         ])
 
     os.rename("optimised","optimised_"+str(rating))
-
     print("Optimised with rating:",rating)
+
+def load_n(n_path):
+    with open(n_path) as f:
+        return json.load(f)
+
+def print_n(n,amount):
+    for i in range(amount):
+        pp(" ".join(n[i]["word"]))
+        pp(best_sentence(n[i])["text"],best_sentence(n[i])["rating"])
