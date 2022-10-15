@@ -93,7 +93,7 @@ def relative_position(word,kanji_list="heisig"):
     kanji_indexes = kanji_index(used_kanji,kanji_list=kanji_list)
     ret = 0
     for index,i in enumerate(kanji_indexes):
-        ret+=i/((index+1)*3)
+        ret+=i*100/(index+1)
     return ret
 
 def rate_sentence(word, dep):
