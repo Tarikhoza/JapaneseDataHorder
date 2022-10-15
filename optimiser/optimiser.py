@@ -198,7 +198,6 @@ def optimise(file_in,file_out,dep = set(), throw_out=True,order="normal"):
             if throw_out:
                 vocab.pop(0)
                 continue
-        print(best_word,dep)
         optimised.append(best_word)
         vocab.pop(0)
 
