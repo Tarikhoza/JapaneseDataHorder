@@ -125,7 +125,7 @@ def rate_sentence(word, dep):
         return word["min_rating"]
 
     for sentence in word["examples"]:
-        sentence_with_desturction(sentence)
+        sentence_difficulty(sentence)
         try:
             sentence_words = set(map(lambda w:clean_word(w["word"]),sentence["destruction"]))
             sentence["rating"] = len(sentence_words)-len(sentence_words&dep)+(5-sentence["difficulty"])
