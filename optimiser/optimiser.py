@@ -214,7 +214,7 @@ def optimise(file_in,file_out,dep = set(), throw_out=True,order="normal"):
 
 
 
-def savefig(optimised,title,path):
+def savefig(optimised,title,order,rating,path):
     plt.suptitle(f"{order} - Score:{rating}")
     plt.title(title)
     plt.xlabel("Word")
@@ -255,11 +255,11 @@ def optimise_all(order="normal",shuffle_list=True):
         optimised_n1
     ])
 
-    savefig(optimised_n5,"N5","optimised/N5graph.png")
-    savefig(optimised_n4,"N4","optimised/N4graph.png")
-    savefig(optimised_n3,"N3","optimised/N3graph.png")
-    savefig(optimised_n2,"N2","optimised/N4graph.png")
-    savefig(optimised_n1,"N1","optimised/N1graph.png")
+    savefig(optimised_n5,"N5",order,rating,"optimised/N5graph.png")
+    savefig(optimised_n4,"N4",order,rating,"optimised/N4graph.png")
+    savefig(optimised_n3,"N3",order,rating,"optimised/N3graph.png")
+    savefig(optimised_n2,"N2",order,rating,"optimised/N4graph.png")
+    savefig(optimised_n1,"N1",order,rating,"optimised/N1graph.png")
 
     merge_images([
         "optimised/N5graph.png",
@@ -269,6 +269,6 @@ def optimise_all(order="normal",shuffle_list=True):
         "optimised/N1graph.png",
         ])
 
-    os.rename("optimised","optimised "+str(rating))
+    os.rename("optimised","optimised_"+str(rating))
 
     print("Optimised with rating:",rating)
