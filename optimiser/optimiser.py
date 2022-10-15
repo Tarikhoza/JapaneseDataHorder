@@ -141,7 +141,7 @@ def best_sentence(word):
         return sorted(word["examples"], key = lambda s:s["rating"])[-1]
 
 
-def optimise(file_in,file_out,dep = set(), throw_out=True,order="normal"):
+def optimise(file_in,file_out,dep = None, throw_out=True,order="normal"):
     #file_in is the file name that should be loaded, it is a string
     #file_out is the file name that the optimsed list should be saved, it is a string
     #dep is the dependency set, is is a set of strings
@@ -158,7 +158,8 @@ def optimise(file_in,file_out,dep = set(), throw_out=True,order="normal"):
     #the kklc order(order that uses the kklc order to sort the words and chooses the best word in range
     #the normal order just gets the best order that and
     #the shuffle order shuffles the words every time
-
+    if dep==None:
+        dep=set()
     no_sentence_words = []
     with open(file_in) as json_file:
         print(f"Loading {file_in}...")
