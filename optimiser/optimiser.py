@@ -241,11 +241,11 @@ def optimise_all(order="normal",shuffle_list=True):
     if "optimised" not in os.listdir():
         os.mkdir("optimised")
 
-    optimised_n5, dep = optimise("n5.json","optimised/optimised_n5.json",order=order)
-    optimised_n4, dep = optimise("n4.json","optimised/optimised_n4.json",order=order, dep=dep)
-    optimised_n3, dep = optimise("n3.json","optimised/optimised_n3.json",order=order, dep=dep)
-    optimised_n2, dep = optimise("n2.json","optimised/optimised_n2.json",order=order, dep=dep)
-    optimised_n1, dep = optimise("n1.json","optimised/optimised_n1.json",order=order, dep=dep)
+    optimised_n5, dep = optimise("extended/n5.json","optimised/optimised_n5.json",order=order)
+    optimised_n4, dep = optimise("extended/n4.json","optimised/optimised_n4.json",order=order, dep=dep)
+    optimised_n3, dep = optimise("extended/n3.json","optimised/optimised_n3.json",order=order, dep=dep)
+    optimised_n2, dep = optimise("extended/n2.json","optimised/optimised_n2.json",order=order, dep=dep)
+    optimised_n1, dep = optimise("extended/n1.json","optimised/optimised_n1.json",order=order, dep=dep)
 
     rating = rate_optimised([
         optimised_n5,
