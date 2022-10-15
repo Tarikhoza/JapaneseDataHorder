@@ -188,7 +188,6 @@ def optimise(file_in,file_out,dep = set(), throw_out=True,order="normal"):
         else:
             raise NameError(f'Ordering mode:"{order}" does not exist.\n Only "normal","heisig", and "shuffle" exist.')
         best_word = vocab[0]
-
         best_example = best_sentence(best_word)
         if best_example != None and "destruction" in best_example:
             example_words = set(map(lambda w:clean_word(w["word"]),best_example["destruction"]))
@@ -199,6 +198,7 @@ def optimise(file_in,file_out,dep = set(), throw_out=True,order="normal"):
             if throw_out:
                 vocab.pop(0)
                 continue
+        print(best_word,dep)
         optimised.append(best_word)
         vocab.pop(0)
 
