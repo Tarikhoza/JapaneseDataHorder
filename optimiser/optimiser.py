@@ -39,7 +39,7 @@ def is_kanji(char):
     return False
 
 def kanji_only(text):
-    #removes kanji from string
+    #every character that is not kanji from string
     return "".join(list(filter(lambda c:is_kanji(c),text)))
 
 with open("data/heisig.json") as json_file:
@@ -51,6 +51,21 @@ with open("data/kklc.json") as json_file:
 def clean_word(word):
     #removes unnessesery characters and returns the 'clean' word
     return word.split("【")[0].replace(' ',"").replace("1.","").replace("2.","").replace("3.","").replace("4.","")
+
+
+def sentence_difficulty(sentence_with_desturction):
+    word_difficulties = []
+    for word in sentence_with_desturction:
+        for n in range(1,6):
+            n_vocab = load_n(f"expanded/N{n}.json")
+            #pun not intended
+            for n_word in n_vocab:
+                if clean_word(word["word"]) in n_word:
+                    word_difficulties.append(n)
+                    break
+                    break
+    sentence_with_desturction["difficulty"] = max(word_difficulties)
+
 
 
 def high_minus_low(num1,num2):
@@ -69,7 +84,7 @@ def word_relation(word1,word2):
 
     rating = len(kanji_only(most_used1))+len(kanji_only(most_used2))
     same = set(kanji_only(most_used1))-set(kanji_only(most_used2))
-    rating-=len(same)
+    rating -= len(same)
 
 
 def kanji_index(kanji_string,kanji_list="heisig"):
@@ -93,7 +108,7 @@ def relative_position(word,kanji_list="heisig"):
     kanji_indexes = kanji_index(used_kanji,kanji_list=kanji_list)
     ret = 0
     for index,i in enumerate(kanji_indexes):
-        ret+=i*100/(index+1)
+        ret+=i*1000/(index+1)
     return ret
 
 def rate_sentence(word, dep):
@@ -110,9 +125,10 @@ def rate_sentence(word, dep):
         return word["min_rating"]
 
     for sentence in word["examples"]:
+        sentence_with_desturction(sentence)
         try:
             sentence_words = set(map(lambda w:clean_word(w["word"]),sentence["destruction"]))
-            sentence["rating"] = len(sentence_words-dep)
+            sentence["rating"] = len(sentence_words)-len(sentence_words&dep)+(5-sentence["difficulty"])
             ratings.append(sentence["rating"])
         except:
             sentence["rating"] = 999999
@@ -158,7 +174,7 @@ def optimise(file_in,file_out,dep = None, throw_out=True,order="normal"):
     #the kklc order(order that uses the kklc order to sort the words and chooses the best word in range
     #the normal order just gets the best order that and
     #the shuffle order shuffles the words every time
-    if dep==None:
+    if dep == None:
         dep=set()
     no_sentence_words = []
     with open(file_in) as json_file:
@@ -195,7 +211,8 @@ def optimise(file_in,file_out,dep = None, throw_out=True,order="normal"):
         if best_example != None and "destruction" in best_example:
             example_words = set(map(lambda w:clean_word(w["word"]),best_example["destruction"]))
             for w in example_words:
-                dep.add(w)
+                #dep.add(w)
+                pass
         else:
             no_sentence_words.append(best_word)
             if throw_out:
