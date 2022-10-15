@@ -218,7 +218,7 @@ def savefig(optimised,title,order,rating,path):
     plt.plot(list(map(lambda word:word["min_rating"],optimised)))
     plt.savefig(path, bbox_inches='tight')
 
-def merge_images(images,file_out="graph.png"):
+def merge_images(images,file_out="extended/graph.png"):
     imgs    = [ Image.open(i) for i in images]
 # pick the image which is the smallest, and resize the others to match it (can be arbitrary image shape here)
     min_shape = sorted( [(np.sum(i.size), i.size ) for i in imgs])[0][1]
