@@ -106,6 +106,7 @@ def rate_sentence(word, dep):
     if(len(word["examples"]) == 0):
         word["min_rating"] = 999999
         word["max_rating"] = 999999
+        word["dep"]=len(dep)
         return word["min_rating"]
 
     for sentence in word["examples"]:
@@ -117,6 +118,7 @@ def rate_sentence(word, dep):
             sentence["rating"] = 999999
     word["min_rating"] = min(ratings)
     word["max_rating"] = max(ratings)
+    word["dep"]=len(dep)
     return word["min_rating"]
 
 def rate_optimised(optimised_list):
@@ -216,8 +218,9 @@ def savefig(optimised,title,order,rating,path):
     plt.ylabel("Difficulty")
     plt.plot(list(map(lambda word:word["min_rating"],optimised)))
     plt.savefig(path, bbox_inches='tight')
+    plt.clf()
 
-def merge_images(images,file_out="extended/graph.png"):
+def merge_images(images,file_out="optimised/graph.png"):
     imgs    = [ Image.open(i) for i in images]
 # pick the image which is the smallest, and resize the others to match it (can be arbitrary image shape here)
     min_shape = sorted( [(np.sum(i.size), i.size ) for i in imgs])[0][1]
