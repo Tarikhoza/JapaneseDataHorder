@@ -108,18 +108,18 @@ def get_pitched_text(text,name=None):
 #TODO: add custom path to get_pitched_text()
 
 def download_pitched_vocab(vocab):
-    vocab_length = len(vocab)
-    for index,word in enumerate(vocab):
-        pp(word)
-        most_used_writing = word["writings"].index(max(word["frequency"]))
-        print(f"{index} of {vocab_length}", end="\r")
-        if  f"w_{word['id']}.png" not in os.listdir("pitch_graph") and f"w_{word['id']}.wav" not in os.listdir("pitch_audio"):
-            try:
-                ojad.get_pitched_text(word["word"],name=f"w_{word['id']}")
-            except Exception as e:
-                print(e)
-                sleep(3600/4)
-                ojad.get_pitched_text(word["word"],name=f"w_{word['id']}")
+    for n in vocab:
+        vocab_length = len(vocab[n])
+        for index,word in enumerate(vocab[n]):
+            most_used_writing = word["writings"].index(max(word["frequency"]))
+            print(f"{index} of {vocab_length}", end="\r")
+            if  f"w_{word['id']}.png" not in os.listdir("pitch_graph") and f"w_{word['id']}.wav" not in os.listdir("pitch_audio"):
+                try:
+                    ojad.get_pitched_text(word["word"],name=f"w_{word['id']}")
+                except Exception as e:
+                    print(e)
+                    sleep(3600/4)
+                    ojad.get_pitched_text(word["word"],name=f"w_{word['id']}")
 
 #if __file__ == "__main__":
 #    package_root = os.path.dirname(os.path.realpath(__file__))+"/.."
