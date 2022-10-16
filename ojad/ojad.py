@@ -108,37 +108,46 @@ def get_pitched_text(text,name=None):
 #TODO: add custom path to get_pitched_text()
 
 def download_pitched_vocab(vocab):
-    for word in vocab:
+    vocab_length = len(vocab)
+    for index,word in enumerate(vocab):
         most_used_writing = word["writings"].index(max(word["writings"]["frequency"]))
-        get_pitched_text(most_used_writing,name=word["id"])
+        print(f"{index} of {vocab_length}", end="\r")
+        if  f"w_{word['id']}.png" not in os.listdir("image") and
+            f"w_{word['id']}.wav" not in os.listdir("audio"):
+            try:
+                ojad.get_pitched_text(word["word"],name=f"w_{word["id"]}")
+            except Exception as e:
+                print(e)
+                sleep(3600/4)
+                ojad.get_pitched_text(word["word"],name=f"w_{word["id"]}")
 
-if __file__ == "__main__":
-    package_root = os.path.dirname(os.path.realpath(__file__))+"/.."
-    sys.path.append(package_root)
-    from optimiser.optimiser import best_sentence
-    for n in range(0,5):
-        with open('n{n+1}_optimised.json') as json_file:
-            n_vocab = json.load(json_file)
-        vocab_length = len(n_vocab)
-        for index,word in enumerate(n_vocab):
-            print(index, "of", vocab_length,f"n{n+1} words",end="\r")
-            if  f"w_{word["id"]}.png" not in os.listdir("image") and
-                f"w_{word["id"]}.wav" not in os.listdir("audio"):
-                try:
-                    ojad.get_pitched_text(word["word"],name=f"w_{word["id"]}")
-                except Exception as e:
-                    print(e)
-                    sleep(3600/4)
-                    ojad.get_pitched_text(word["word"],name=f"w_{word["id"]}")
+#if __file__ == "__main__":
+#    package_root = os.path.dirname(os.path.realpath(__file__))+"/.."
+#    sys.path.append(package_root)
+#    from optimiser.optimiser import best_sentence
+#    for n in range(0,5):
+#        with open('n{n+1}_optimised.json') as json_file:
+#            n_vocab = json.load(json_file)
+#        vocab_length = len(n_vocab)
+#        for index,word in enumerate(n_vocab):
+#            print(index, "of", vocab_length,f"n{n+1} words",end="\r")
+#            if  f"w_{word['id']}.png" not in os.listdir("image") and
+#                f"w_{word['id']}.wav" not in os.listdir("audio"):
+#                try:
+#                    ojad.get_pitched_text(word["word"],name=f"w_{word["id"]}")
+#                except Exception as e:
+#                    print(e)
+#                    sleep(3600/4)
+#                    ojad.get_pitched_text(word["word"],name=f"w_{word["id"]}")
 
-            if  f"s_{word["id"]}.png" not in os.listdir("image") and
-                f"s_{word["id"]}.wav" not in os.listdir("audio"):
-                try:
-                    ojad.get_pitched_text(best_sentence(word)["text"], name=f"s_{word["id"]}")
-                except Exception as e:
-                    print(e)
-                    sleep(3600/4)
-                    ojad.get_pitched_text(best_sentence(word)["text"], name=f"s_{word["id"]}")
+#            if  f"s_{word['id']}.png" not in os.listdir("image") and
+#                f"s_{word['id']}.wav" not in os.listdir("audio"):
+#                try:
+#                    ojad.get_pitched_text(best_sentence(word)["text"], name=f"s_{word["id"]}")
+#                except Exception as e:
+#                    print(e)
+#                    sleep(3600/4)
+#                    ojad.get_pitched_text(best_sentence(word)["text"], name=f"s_{word["id"]}")
 
 
 
