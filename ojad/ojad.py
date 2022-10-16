@@ -112,14 +112,13 @@ def download_pitched_vocab(vocab):
     for index,word in enumerate(vocab):
         most_used_writing = word["writings"].index(max(word["writings"]["frequency"]))
         print(f"{index} of {vocab_length}", end="\r")
-        if  f"w_{word['id']}.png" not in os.listdir("image") and
-            f"w_{word['id']}.wav" not in os.listdir("audio"):
+        if  f"w_{word['id']}.png" not in os.listdir("pitch_graph") and f"w_{word['id']}.wav" not in os.listdir("pitch_audio"):
             try:
-                ojad.get_pitched_text(word["word"],name=f"w_{word["id"]}")
+                ojad.get_pitched_text(word["word"],name=f"w_{word['id']}")
             except Exception as e:
                 print(e)
                 sleep(3600/4)
-                ojad.get_pitched_text(word["word"],name=f"w_{word["id"]}")
+                ojad.get_pitched_text(word["word"],name=f"w_{word['id']}")
 
 #if __file__ == "__main__":
 #    package_root = os.path.dirname(os.path.realpath(__file__))+"/.."
