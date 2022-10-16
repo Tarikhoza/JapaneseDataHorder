@@ -50,7 +50,11 @@ def key_out_background(file_name):
 def get_pitched_text(text,name=None):
     #this function downloads the pitch accent graph, as well as the audio generated from OJAD-Suzuki-kun
     #the audio is saved in the audio folder as wav and the pitch accent graphs are saved in the image folder as png
+    if "pitch_graph" not in os.listdir():
+        os.mkdir("pitch_graph")
 
+    if "pitch_audio" not in os.listdir():
+        os.mkdir("pitch_audio")
     if name == None:
         name = text
     driver.get("https://www.gavo.t.u-tokyo.ac.jp/ojad/phrasing")
@@ -65,7 +69,7 @@ def get_pitched_text(text,name=None):
     sleep(5)
 
     #making a screenshot of the generated pitch accent graph
-    driver.find_element(By.CLASS_NAME,"phrasing_phrase_wrapper").screenshot(f"image/{name}.png")
+    driver.find_element(By.CLASS_NAME,"phrasing_phrase_wrapper").screenshot(f"pitch_graph/{name}.png")
     generate_btn=driver.find_element(By.ID,"phrasing_main").find_elements(By.CLASS_NAME,"submit")
 
     #executing the JS function to generate the audio
@@ -90,7 +94,7 @@ def get_pitched_text(text,name=None):
 
     file_to_move = os.path.join("download",os.listdir("download")[0])
 
-    audio_path = os.path.join(os.getcwd(),"audio",name + ".wav")
+    audio_path = os.path.join(os.getcwd(),"pitch_audio",name + ".wav")
     shutil.copy2(file_to_move, audio_destination)
     sleep(1)
 
@@ -98,10 +102,15 @@ def get_pitched_text(text,name=None):
     for i in os.listdir("download"):
         os.remove(os.path.join("download",i))
     #returns audio path, image path
-    return audio_path,f"image/{name}.png"
+    return audio_path,f"pitch_graph/{name}.png"
 
 #TODO: make a function download_all from optimised
 #TODO: add custom path to get_pitched_text()
+
+def download_pitched_vocab(vocab):
+    for word in vocab:
+        most_used_writing = word["writings"].index(max(word["writings"]["frequency"]))
+        get_pitched_text(most_used_writing,name=word["id"])
 
 if __file__ == "__main__":
     package_root = os.path.dirname(os.path.realpath(__file__))+"/.."
