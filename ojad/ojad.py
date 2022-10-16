@@ -8,7 +8,7 @@ from time import sleep
 import os
 import shutil
 from pathlib import Path
-
+from pprint import pprint as pp
 #set options
 #set webdriver to be headless, it means to make it invisble and in work in backgound
 options = FirefoxOptions()
@@ -110,6 +110,7 @@ def get_pitched_text(text,name=None):
 def download_pitched_vocab(vocab):
     vocab_length = len(vocab)
     for index,word in enumerate(vocab):
+        pp(word)
         most_used_writing = word["writings"].index(max(word["frequency"]))
         print(f"{index} of {vocab_length}", end="\r")
         if  f"w_{word['id']}.png" not in os.listdir("pitch_graph") and f"w_{word['id']}.wav" not in os.listdir("pitch_audio"):
