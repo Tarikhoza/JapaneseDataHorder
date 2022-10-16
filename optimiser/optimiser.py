@@ -208,6 +208,7 @@ def optimise(file_in,file_out,dep = None, throw_out=True,order="normal"):
         json.dump(optimised, fp)
 
     print(f"Optimised {file_in} with {len(no_sentence_words)} words without sentences")
+    pp(no_sentence_words)
     return optimised, dep
 
 
