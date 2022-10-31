@@ -156,7 +156,7 @@ def get_sentences(word,amount=10):
     return ret
 
 #TODO: convert main into functions, extend_n
-def get_sentences_for_all_vocab():
+def download_sentences_for_all_vocab():
     if "cache.json" not in os.listdir():
         os.system("echo '{}' > cache.json")
 
@@ -198,3 +198,4 @@ def get_sentences_for_all_vocab():
             os.mkdir("extended")
         with open(f'extended/n{str(n+1)}.json', 'w') as f:
             json.dump(n_vocab, f)
+
