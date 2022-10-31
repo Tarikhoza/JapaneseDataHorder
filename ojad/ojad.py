@@ -80,7 +80,7 @@ def get_pitched_text(text,name=None):
 
     driver.execute_script("wav_filename_save()")
     sleep(5)
-
+    os.mkdir("download")
 
     #waiting for the download to complete
     while len(os.listdir("download"))==0:
