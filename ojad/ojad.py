@@ -1,4 +1,4 @@
-#import geckodriver_autoinstaller
+import geckodriver_autoinstaller
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -14,21 +14,10 @@ from pprint import pprint as pp
 options = FirefoxOptions()
 options.add_argument('-headless')
 #install webdriver if needed
-#geckodriver_autoinstaller.install()
+geckodriver_autoinstaller.install()
 
 #setting profile so that the download folder is in the same path as the script
 profile = webdriver.FirefoxProfile()
-profile.set_preference("browser.download.folderList", 2)
-profile.set_preference("browser.download.manager.showWhenStarting", False)
-profile.set_preference("browser.download.dir", os.path.join(os.getcwd(),"download"))
-profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream")
-
-
-if os.name == "nt":
-    driver_path=os.path.join(os.getcwd(),"geckodriver.exe")
-    driver = webdriver.Firefox(options=options,executable_path=driver_path)
-else:
-    driver = webdriver.Firefox(options=options)
 
 
 
@@ -48,13 +37,18 @@ def key_out_background(file_name):
 
 
 def get_pitched_text(text,name=None):
-    #this function downloads the pitch accent graph, as well as the audio generated from OJAD-Suzuki-kun
-    #the audio is saved in the audio folder as wav and the pitch accent graphs are saved in the image folder as png
+    if os.name == "nt":
+        driver_path=os.path.join(os.getcwd(),"geckodriver.exe")
+        driver = webdriver.Firefox(options=options,executable_path=driver_path)
+    else:
+        driver = webdriver.Firefox(options=options)
+
+
+    #this function downloads the pitch accent graph, 
+    #the pitch accent graphs are saved in the pitch_graph folder as png
     if "pitch_graph" not in os.listdir():
         os.mkdir("pitch_graph")
 
-    if "pitch_audio" not in os.listdir():
-        os.mkdir("pitch_audio")
     if name == None:
         name = text
     driver.get("https://www.gavo.t.u-tokyo.ac.jp/ojad/phrasing")
@@ -70,39 +64,7 @@ def get_pitched_text(text,name=None):
 
     #making a screenshot of the generated pitch accent graph
     driver.find_element(By.CLASS_NAME,"phrasing_phrase_wrapper").screenshot(f"pitch_graph/{name}.png")
-    generate_btn=driver.find_element(By.ID,"phrasing_main").find_elements(By.CLASS_NAME,"submit")
-
-    #executing the JS function to generate the audio
-    driver.execute_script("synthesis_and_get_filename()")
-    sleep(5)
-
-    #executing the JS function to download the audio
-
-    driver.execute_script("wav_filename_save()")
-    sleep(5)
-    os.mkdir("download")
-
-    #waiting for the download to complete
-    while len(os.listdir("download"))==0:
-        sleep(1)
-
-    #the audio is saved in the download folder
-    #we don't know the name of the downloaded file
-    #only one file should be in the download folder and this is the downloaded audio
-    #we can move it to the audio folder and rename it
-    #we expect only the audio file in the folder
-
-    file_to_move = os.path.join("download",os.listdir("download")[0])
-
-    audio_path = os.path.join(os.getcwd(),"pitch_audio",name + ".wav")
-    shutil.copy2(file_to_move, audio_destination)
-    sleep(1)
-
-    #remove every file from download folder
-    for i in os.listdir("download"):
-        os.remove(os.path.join("download",i))
-    #returns audio path, image path
-    return audio_path,f"pitch_graph/{name}.png"
+    return f"pitch_graph/{name}.png"
 
 #TODO: make a function download_all from optimised
 #TODO: add custom path to get_pitched_text()
