@@ -64,7 +64,7 @@ def get_pitched_text(text,name=None):
 
     #making a screenshot of the generated pitch accent graph
     driver.find_element(By.CLASS_NAME,"phrasing_phrase_wrapper").screenshot(f"pitch_graph/{name}.png")
-    return f"pitch_graph/{name}.png"
+    return f"{name}.png"
 
 #TODO: make a function download_all from optimised
 #TODO: add custom path to get_pitched_text()
